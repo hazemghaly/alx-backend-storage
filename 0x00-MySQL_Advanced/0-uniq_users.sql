@@ -2,8 +2,9 @@
 -- create table
 CREATE DATABASE IF NOT EXISTS holberton;
 USE holberton;
+GRANT ALL PRIVILEGES ON holberton.* TO 'root'@'localhost';
 CREATE TABLE IF NOT EXISTS holberton.users (
-    name VARCHAR(255) UNIQUE NOT NULL,
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
-    Id int identity PRIMARY KEY NOT NULL
+    name VARCHAR(255) UNIQUE NOT NULL
     );
